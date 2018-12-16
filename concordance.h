@@ -9,11 +9,10 @@ class Concordance
     std::vector<list> m_list;
 
 public:
-    Concordance(); //default constructor
 
-    std::vector<double> word_list();
+    std::vector<double> word_list();//hold words and times used
 
-    void read(); //read in this concordance object
+    string choose_word()//choose next word to add to concordance vector
 
     bool more_words(Concordance w) const; //true more input words to compute false if not
 

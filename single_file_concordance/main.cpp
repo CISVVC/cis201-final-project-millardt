@@ -25,6 +25,9 @@ Reads numbers from a file and finds the maximum vale
 */
 
 /*
+
+
+
 class Concordance
 {
     std::vector<list> m_list;
@@ -67,39 +70,33 @@ void Concordance::print() const
 */
 double read_data(ifstream& in)
 {
-double highest;
-double next;
-if(in >> next)
-highest = next;
-else
+    double word;
+
+    double next;
+    
+    bool more_words const; //true more input words to compute false if not
+
+
 return 0;
-
-while (in >> next)
-{
-if (next > highest)
-highest = next;
-}
-
-return highest;
 }
 
 int main()
 {
-string filename;
-cout << "Please enter the data file name: ";
-cin >> filename;
+    string filename;
+    cout << "Please enter the data file name: ";
+    cin >> filename;
 
-ifstream infile;
-infile.open(filename.c_str());
+    ifstream infile;
+    infile.open(filename.c_str());
 
-if (infile.fail())
-{
-cout << "Error opening" << filename << "\n";
-return 1;
+    if (infile.fail())
+    {
+    cout << "Error opening" << filename << "\n";
+    return 1;
 }
 
-double max = read_data(infile);
-cout << "The maximum value is " << max << "\n";
+double count = read_data(infile);
+cout << "the word occurs: " << max << " times " << "\n";
 
 infile.close();
 

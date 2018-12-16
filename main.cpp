@@ -9,22 +9,36 @@ Email: naglet@student.vvc.edu
 #include<iostream>
 
 #include "concordance.h"
+#include "word_count.h"
 
 
 int main()
 {
+    //prompt for which file to use then open it
+    string filename;
+    cout << "Please enter the data file you would like to check concordance for ";
+    cin >> filename;
+    ifstream infile;
+    infile.open(filename.c_str());
 
-    bool more = true; //more input words bool y more n stop
+    if(infile.fail())
+    {
+        cout << "Error opening " << filename << "\n";
+        return 1;
+    }
+
+
+    bool more = true; //more input words check. y for more, n to stop
     while(more)
     {
-        
-        
         cout << "More words? (y/n) ";
         string answer;
         getline(cin, answer);
         if (answer != "y")
             more = false;
     }
+    
 
+    infile.close(); //close chosen file
     return 0;
 }

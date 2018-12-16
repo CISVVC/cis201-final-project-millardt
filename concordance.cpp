@@ -7,22 +7,14 @@
 
 #include "concordance.h"
 
-Concordance::Concordance()
+string Concordance::choose_word()//receive input after prompt for next word to add to vector
 {
-
+    string choose;
+    cin << choose;
+    return choose;
 }
 
-void Concordance::read()
-{
-
-}
-
-bool Concordance::more_words(Concordance w) const
-{
-
-}
-
-void Concordance::print() const
+void Concordance::print() const//print word type, and count of each word
 {
 
 }
